@@ -1,158 +1,21 @@
 <section id="projects" class="py-28 bg-gray-50">
   <div class="container-layout">
 
-    <div class="mb-20">
-      <span class="text-sm tracking-widest text-gray-500 uppercase">
+    <div appReveal="left" class="mb-16 max-w-2xl">
+      <span class="text-xs tracking-[0.2em] text-gray-500 uppercase">
         Portfólio
       </span>
 
-      <h2 class="mt-4 text-4xl md:text-5xl font-semibold">
+      <h2 class="mt-4 text-4xl md:text-5xl font-medium tracking-tight">
         Projetos
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-      <div class="group border border-gray-200 rounded-xl overflow-hidden bg-white transition hover:shadow-lg">
-
-        <img src="images/portfolio.png"
-             alt="Projeto do meu portfólio"
-             class="w-full h-64 object-cover">
-
-        <div class="p-6 space-y-4">
-
-          <h3 class="text-xl font-semibold">
-            Meu portfólio
-          </h3>
-
-          <p class="text-gray-600">
-            Portfólio pessoal
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-            <span>Angular</span>
-            <span>TypeScript</span>
-            <span>Tailwind CSS</span>
-          </div>
-
-          <div class="flex gap-6 pt-4 text-sm font-medium">
-            <a href="https://tiagosune.com" target="_blank" class="hover:text-emerald-600 transition">
-              Ver projeto
-            </a>
-            <a href="https://github.com/tiagosune/portfolio" target="_blank" class="hover:text-emerald-600 transition">
-              GitHub
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="group border border-gray-200 rounded-xl overflow-hidden bg-white transition hover:shadow-lg">
-
-        <img src="images/qrart.png"
-             alt="Projeto QrArt"
-             class="w-full h-64 object-cover">
-
-        <div class="p-6 space-y-4">
-
-          <h3 class="text-xl font-semibold">
-            QrArt
-          </h3>
-
-          <p class="text-gray-600">
-            SaaS de geração de QR Codes personalizados e dinâmicos integrado com Stripe para pagamentos.
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>React</span>
-          </div>
-
-          <div class="flex gap-6 pt-4 text-sm font-medium">
-            <a href="https://qrart.com.br" target="_blank" class="hover:text-emerald-600 transition">
-              Ver projeto
-            </a>
-            <a href="https://github.com/tiagosune/QRArt" target="_blank" class="hover:text-emerald-600 transition">
-              GitHub
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="group border border-gray-200 rounded-xl overflow-hidden bg-white transition hover:shadow-lg">
-
-        <img src="images/incopel.png"
-             alt="Projeto do site institucional Incopel"
-             class="w-full h-64 object-cover">
-
-        <div class="p-6 space-y-4">
-
-          <h3 class="text-xl font-semibold">
-            Site institucional Incopel
-          </h3>
-
-          <p class="text-gray-600">
-            Desenvolvi do zero o site institucional da empresa mineradora Incopel, com o objetivo de melhorar o
-            posicionamento online da empresa.
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="flex gap-6 pt-4 text-sm font-medium">
-            <a href="https://tiagosune.github.io/Incopel" target="_blank" class="hover:text-emerald-600 transition">
-              Ver projeto
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="group border border-gray-200 rounded-xl overflow-hidden bg-white transition hover:shadow-lg">
-
-        <img src="images/medtype.png"
-             alt="Projeto MedType"
-             class="w-full h-64 object-cover">
-
-        <div class="p-6 space-y-4">
-
-          <h3 class="text-xl font-semibold">
-            MedType
-          </h3>
-
-          <p class="text-gray-600">
-            Sistema web para criar, armazenar e organizar laudos médicos de ultrassonografia
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>React</span>
-          </div>
-
-          <div class="flex gap-6 pt-4 text-sm font-medium">
-            <a href="https://github.com/tiagosune/MedType" target="_blank" class="hover:text-emerald-600 transition">
-              GitHub
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-
-
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
+      @for (project of projects; track project.title) {
+        <app-project-card [project]="project"></app-project-card>
+      }
     </div>
-
 
   </div>
 </section>
-
