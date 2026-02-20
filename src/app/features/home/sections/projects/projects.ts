@@ -16,7 +16,7 @@ export class Projects {
       title: "Meu portfólio",
       description: "Portfólio pessoal",
       tech: ["Angular", "TypeScript", "Tailwind CSS"],
-      image: "images/portfolio.png",
+      image: "images/portfolio.webp",
       demo: "https://tiagosune.com",
       github: "https://github.com/tiagosune/portfolio"
     },
@@ -24,7 +24,7 @@ export class Projects {
       title: "QrArt",
       description: "SaaS de geração de QR Codes personalizados e dinâmicos integrado com Stripe para pagamentos.",
       tech: ["Java", "Spring Boot", "React"],
-      image: "images/qrart.png",
+      image: "images/qrart.webp",
       demo: "https://qrart.com.br",
       github: "https://github.com/tiagosune/QRArt"
     },
@@ -33,14 +33,14 @@ export class Projects {
       description: "Desenvolvi do zero o site institucional da empresa mineradora Incopel, com o objetivo de melhorar o\n" +
         "            posicionamento online da empresa.",
       tech: ["HTML", "CSS", "JavaScript"],
-      image: "images/incopel.png",
+      image: "images/incopel.webp",
       demo: "https://tiagosune.github.io/Incopel"
     },
     {
       title: "MedType",
       description: "Sistema web para criar, armazenar e organizar laudos médicos de ultrassonografia.",
       tech: ["Java", "Spring Boot", "React"],
-      image: "images/medtype.png",
+      image: "images/medtype.webp",
       github: "https://github.com/tiagosune/MedType"
     }
   ];
