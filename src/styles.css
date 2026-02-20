@@ -10,6 +10,10 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .container-layout {
   @apply mx-auto px-6;
   max-width: 1200px;

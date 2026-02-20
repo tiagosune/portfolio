@@ -10,9 +10,8 @@
            class="w-36 transition-transform duration-200 hover:scale-105">
     </a>
 
-    <div class="absolute left-1/2 -translate-x-1/2 flex gap-10 font-medium">
+    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-10 font-medium">
 
-      <!-- HOME -->
       <a
         href="#home"
         class="relative pb-1 transition-colors duration-300"
@@ -30,7 +29,6 @@
     </span>
       </a>
 
-      <!-- SOBRE -->
       <a
         href="#about"
         class="relative pb-1 transition-colors duration-300"
@@ -48,7 +46,6 @@
     </span>
       </a>
 
-      <!-- PROJETOS -->
       <a
         href="#projects"
         class="relative pb-1 transition-colors duration-300"
@@ -66,7 +63,6 @@
     </span>
       </a>
 
-      <!-- SKILLS -->
       <a
         href="#skills"
         class="relative pb-1 transition-colors duration-300"
@@ -84,7 +80,6 @@
     </span>
       </a>
 
-      <!-- CONTATO -->
       <a
         href="#contact"
         class="relative pb-1 transition-colors duration-300"
@@ -99,10 +94,32 @@
              origin-left transform scale-x-0
              transition-transform duration-300"
           [class.scale-x-100]="scrollService.activeSection() === 'contact'">
-    </span>
+        </span>
       </a>
 
     </div>
+
+    @if (menuOpen) {
+      <div class="md:hidden fixed top-16 left-0 w-full bg-white shadow-lg py-8 z-40">
+
+        <div class="flex flex-col items-center gap-6 font-medium text-lg">
+
+          <a href="#home" (click)="toggleMenu()">Home</a>
+          <a href="#about" (click)="toggleMenu()">Sobre</a>
+          <a href="#projects" (click)="toggleMenu()">Projetos</a>
+          <a href="#skills" (click)="toggleMenu()">Skills</a>
+          <a href="#contact" (click)="toggleMenu()">Contato</a>
+
+        </div>
+
+      </div>
+    }
+
+    <button
+      class="md:hidden w-10 h-10 flex items-center justify-center"
+      (click)="toggleMenu()">
+      ☰
+    </button>
 
     <button
       class="w-10 h-10 flex items-center justify-center

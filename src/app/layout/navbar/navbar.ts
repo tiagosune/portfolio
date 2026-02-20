@@ -9,6 +9,12 @@ import {ScrollService} from '../../core/services/scroll.service';
 })
 export class Navbar {
 
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   toggleTheme() {
     const html = document.documentElement;
 
