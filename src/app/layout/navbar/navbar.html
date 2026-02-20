@@ -102,20 +102,17 @@
     @if (menuOpen) {
       <div class="md:hidden fixed inset-0 z-40 flex items-start justify-center pt-24">
 
-        <!-- Backdrop -->
         <div
           class="absolute inset-0"
           (click)="toggleMenu()">
         </div>
 
-        <!-- Menu Card -->
         <div
           class="relative w-[90%] max-w-sm bg-white
              rounded-3xl shadow-2xl
              border border-gray-200
              p-8 space-y-4 animate-fade-in">
 
-          <!-- ITEM -->
           <a
             href="#home"
             (click)="toggleMenu()"
