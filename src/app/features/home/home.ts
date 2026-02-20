@@ -3,12 +3,13 @@ import {Hero} from './sections/hero/hero';
 import {About} from './sections/about/about';
 import {Projects} from './sections/projects/projects';
 import {Skills} from './sections/skills/skills';
+import {Contact} from './sections/contact/contact';
 import {AfterViewInit} from '@angular/core';
 import {ScrollService} from '../../core/services/scroll.service';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, About, Projects, Skills],
+  imports: [Hero, About, Projects, Skills, Contact],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
