@@ -1,4 +1,4 @@
-<section id="contact" class="py-32 bg-gray-50">
+<section id="contact" class="py-32 bg-gray-50 relative">
 
   <div appReveal="up" class="container-layout text-center">
 
@@ -51,12 +51,22 @@
       </button>
 
     </div>
-    @if (copied()) {
-      <p class="mt-6 text-emerald-600 font-medium transition-opacity duration-300">
-        ✓ Email copiado para a área de transferência
-      </p>
-    }
 
   </div>
 
 </section>
+
+@if (copied()) {
+  <div
+    class="fixed bottom-6 right-6 z-50
+           bg-emerald-600 text-white
+           px-6 py-4 rounded-2xl shadow-2xl
+           flex items-center gap-3
+           text-sm font-medium
+           animate-toast-in">
+
+    <span class="text-lg">✓</span>
+    Email copiado para a área de transferência
+
+  </div>
+}
