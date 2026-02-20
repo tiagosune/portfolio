@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import {RevealDirective} from '../../shared/directives/reveal';
 
 @Component({
   selector: 'app-footer',
-  imports: [
-    RevealDirective
-  ],
+  imports: [],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
