@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ScrollService} from '../../core/services/scroll.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,5 +19,6 @@ export class Navbar {
     }
   }
 
+  constructor(public scrollService: ScrollService) {}
 
 }
