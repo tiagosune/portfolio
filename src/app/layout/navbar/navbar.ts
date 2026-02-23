@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, HostListener} from '@angular/core';
 import {ScrollService} from '../../core/services/scroll.service';
 
 @Component({
@@ -9,22 +9,24 @@ import {ScrollService} from '../../core/services/scroll.service';
 })
 export class Navbar {
 
+  constructor(public scrollService: ScrollService, private elementRef: ElementRef) {
+  }
+
   menuOpen = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  toggleTheme() {
-    const html = document.documentElement;
+  @HostListener('document: click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (!this.menuOpen) return;
+    const clickedInside = this.elementRef.nativeElement.contains(event.target);
 
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
-    } else {
-      html.classList.add('dark');
+    if (!clickedInside) {
+      this.menuOpen = false;
     }
   }
 
-  constructor(public scrollService: ScrollService) {}
-
 }
+
